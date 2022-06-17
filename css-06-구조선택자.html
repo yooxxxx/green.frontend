@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 구조 선택자</title>
+    <style>
+        /* 초기설정 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        /* 시작 */
+        .util{
+            position: relative;
+            height: 40px;
+            background-color: #222;
+        }
+        .util ul{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            line-height: 20px;
+        }
+        /* 부모의 높이가 40 가운데 놓을거니까 위아래 10씩 주면됨 */
+        .util ul li{
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            padding: 0 10px;
+        }
+        .util ul li::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            top: 6px;
+            left: 0;
+            background-color: #fff;
+        }
+        .util ul li:first-child::before{
+            /* content: ""; */
+            display: none;
+        }
+
+        /* gnb */
+        .gnb{
+            position: relative;
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+        }
+        .gnb ul{
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+        .gnb ul li{
+            width: 150px;
+            float: left;
+            line-height: 80px;
+            text-align: center;
+            border-left: 1px solid #CCC;
+        }
+
+        .gnb ul li:last-child{
+            border-right: 1px solid #CCC;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="util">
+        <ul>
+            <li>Join</li>
+            <li>Login</li>
+            <li>Order</li>
+            <li>Cart</li>
+        </ul>
+    </nav>
+
+    <nav class="gnb">
+        <ul>
+            <li>About</li>
+            <li>Product</li>
+            <li>Ptomotion</li>
+            <li>Notice</li>
+        </ul>
+    </nav>
+</body>
+</html>

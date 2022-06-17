@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3 전체 선택자</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            border: 1px solid #ff0;
+        }
+        /* 원래는 같이 입력함  */
+        div{
+            width: 50%;
+        }
+        div{
+            background-color: #EEE;
+            width: 80%;
+        }
+        /* 같은선택자는 나중에 쓴게 우선이 됨 */
+        div *{
+            color:skyblue;
+        }
+        div p{
+            width: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CSS3의 모든 태그를 선택해 주는 전체 선택자</h1>
+    <hr />
+    <div>
+        <h2>* - 전체 선택자</h2>
+        <p>html의 모든 태그를 선택하여 스타일을 적용 시킬 때 사용되는 선택자</p>
+        <p>다른 선택자와 함께 사용하여 특정한 태그 내부의 모든 태그를 선택할 수 있다.</p>
+    </div>
+</body>
+</html>

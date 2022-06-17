@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 가시속성 over box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        /* 시작 */
+        h1{
+            font-size: 24px;
+            text-align: center;
+            line-height: 100px;
+        }
+        h1::after{
+            content: "";
+            width: 100px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            margin-left: -50%;
+        }
+
+        .tip_list{
+            position: relative;
+            width: 1200px;
+            margin: 60px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .tip_list li{
+            width: 32%;
+            position: relative;
+        }
+        .tip_list img{
+            width: 100%;
+            display: block;
+        }
+        /* 이미지를 오버가 덮고 있음 */
+        .tip_list li .over{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: none;
+        }
+
+        .tip_list li .over a{
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: #FFF;
+            color: #000;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 100px;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.5;
+            text-decoration: 0.7s;
+        }
+        .tip_list li .over a:hover{
+            opacity: 1;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            // li에 마우스를 올리면 over가 나타난다
+            $('.tip_list li').mouseenter(function(){
+                $(this).find('.over').slideDown()
+            })
+            // li에 마우스르 치우면 over가 사라진다
+            $('.tip_list li').mouseleave(function(){
+                $(this).find('.over').slideUp()
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>인테리어 TIP!</h1>
+    <ul class="tip_list">
+        <li><img src="img/tip1.jpg" alt="">
+            <div class="over">
+                <a href="#">VIEW MORE</a>
+            </div>
+        </li>
+        <li><img src="img/tip2.jpg" alt="">
+            <div class="over">
+                <a href="#">VIEW MORE</a>
+            </div>
+        </li>
+        <li><img src="img/tip3.jpg" alt="">
+            <div class="over">
+                <a href="#">VIEW MORE</a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

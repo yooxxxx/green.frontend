@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 아이디 클래스 선택자</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .orange_text{
+            color: #F60;
+        }
+        .blue_text{
+            color: #08F;
+        }
+        .bold_text{
+            font-weight: bold;
+        }
+        .line_text{
+            text-decoration: underline;
+        }
+        .big_text{
+            font-size: 1.2em;
+        }
+
+        #header, #container, #footer{
+            position: relative; 
+            margin: 10px auto; 
+            width: 1200px; 
+            border: 1px solid #EEE;
+        }
+
+
+        /* header */
+        #header{ 
+            height: 100px;
+        }
+        #header h1{
+            position: absolute; 
+            top: 20px; 
+            left: 10px;
+        }
+        #header .util{
+            position: absolute; 
+            top: 10px; 
+            right: 10px;
+        }
+        #header .gnb{
+            position: absolute; 
+            bottom: 10px; 
+            right: 10px;
+        }
+
+
+        /* container */
+        #container{
+            display: flex;
+        }
+        #container article{
+            padding: 10px;
+        }
+        #container article h2{
+            font-size: 20px; 
+            line-height: 2em;
+        }
+        #container article p{
+            font-size: 14px; 
+            line-height: 1.6em;
+        }
+        #container .about{
+            width: 60%;
+        }
+        #container .ceo{
+            width: 40%;
+        }
+        /* h2중에 블루텍스트인 애들만 은근 많이 사용됨*/
+        #container h2.blue_text{
+            color: #00f;
+        }
+
+
+        /* footer */
+        #footer{ 
+            height: 100px;
+        }
+        .copy{font-size: 14px;}
+        /* 태그나 클래스로 나중에 써도 안먹는 이유 아이디가 우선순위기 때문에 */
+        .header{
+            height: 500px;
+        } 
+        p{
+            font-size: 50px;
+        }
+
+        /* 1. 아이디
+        2. 클래스
+        3. 나중에 쓴거 */
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>LOGO</h1>
+        <nav class="util">
+            <h2>UTIL</h2>
+        </nav>
+        <nav class="gnb">
+            <h2>GNB</h2>
+        </nav>
+    </header>
+    <section id="container">
+        <article class="about">
+            <h2>About</h2>
+            <p>Aliquam nulla massa, placerat id volutpat vitae, molestie ac mi. Fusce enim turpis, congue semper sodales ac, luctus a eros. Morbi justo diam, dictum eu bibendum vitae, <span class="orange_text bold_text">viverra</span> in dolor. Sed vel cursus eros. Donec tincidunt libero quis pretium tempus. Phasellus sollicitudin vulputate ipsum at fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan massa eget sagittis <span class="blue_text big_text">blue_text</span> Mauris cursus semper elit, a feugiat erat condimentum sit amet. Nunc sit amet lacus dignissim, blandit mi ornare, posuere sem. Aenean tempus eget turpis ut aliquam.</p>
+        </article>
+        <article class="ceo">
+            <h2 class="line_text blue_text">CEO</h2>
+            <p>Praesent sit amet mi ornare odio finibus tincidunt. Nullam consequat justo sit amet nisi imperdiet faucibus non quis sapien. Phasellus gravida dapibus neque, sit amet volutpat elit lobortis nec. Nam quis varius ex. Praesent odio purus, vulputate in lectus sed, mollis lobortis lacus. Fusce tempus augue sed dui maximus porta. In ultricies mauris ac purus vestibulum, id tincidunt purus hendrerit. Fusce at rhoncus lacus. Sed quis finibus enim. In eget nulla quam. Pellentesque tincidunt, elit nec auctor euismod, erat lacus lobortis odio, eu rhoncus orci est vel eros.</p>
+        </article>
+    </section>
+    <footer id="footer">
+        <p class="copy">copyright &copy; Greenart.co.kr all right reserved.</p>
+    </footer>
+</body>
+</html>

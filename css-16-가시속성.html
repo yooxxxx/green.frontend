@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 가시 속성</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        ul>li{
+            display: block;
+            width: 150px;
+            background-color: #F90;
+            float: left;
+        }
+        ul>li:nth-child(3){
+                display: none;
+        }
+        /* 픽시드는 위치의 영향을 받지않음 고정된 위치*/
+        .pop{
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+
+        /* .pop input[type=checkbox]:checked~input{
+            visibility: hidden;
+        } */
+        .pop{
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+        #pop{
+            display: none;
+        }
+        #pop:checked+.pop {
+            visibility: hidden;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>LIST-1</li>
+        <li>LIST-2</li>
+        <li><a href="http://naver.com">LIST-3</a></li>
+        <li>LIST-4</li>
+        <li>LIST-5</li>
+        <li>LIST-6</li>
+    </ul>
+    
+    <input type="checkbox" id="pop">
+    <div class="pop">
+        <img src="img/shop/s3.png" alt="event">
+        <label for="pop">닫기</label>
+    </div>
+</body>
+</html>

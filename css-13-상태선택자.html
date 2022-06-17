@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 상태 선택자</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .agree{
+            position: relative;
+            width: 400px;
+            border: 1px solid #CCC;
+            padding: 10px;
+        }
+        .agree p{
+            font-size: 14px;
+            border: 1px solid #CCC;
+            line-height: 1.6em;
+            text-align: justify;
+            padding: 10px;
+            display: none;
+        }
+        /* 체크를했을때 보이게하기 */
+        .agree input[type=checkbox]:checked~p{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="agree">
+        <input type="checkbox" name="" id="agree"> 
+        <label for="agree">약관 동의</label>
+
+        <p>Phasellus aliquet tempor feugiat. Donec at erat ac lectus pellentesque rutrum ac ac mi. Vivamus commodo sed enim a ultricies. Duis luctus ex ligula, vitae viverra leo posuere a. Curabitur commodo, enim non pretium posuere, est nunc rutrum felis, sed viverra lacus tortor sed lacus. Nunc egestas ex lectus. Nunc finibus augue id sodales tincidunt. Donec non ex hendrerit, dignissim arcu porta, tincidunt purus. Mauris scelerisque eros nec urna consequat interdum. Curabitur sit amet odio euismod est iaculis pulvinar nec vitae tortor. Aliquam lectus felis, ultricies id nisi ut, maximus tincidunt justo. Vestibulum molestie pellentesque varius. Nunc et aliquam nibh, sed vulputate dolor.</p>
+    </div>
+</body>
+</html>

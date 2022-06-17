@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 구조 선택자</title>
+    <style>
+        /* 초기 설정 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            line-height: 100px; ;
+        }
+        li {
+            list-style: none;
+        }
+        /* 시작 */
+        .notice{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .notice li{
+            font-size: 14px;
+            color: #333;
+            line-height: 40px;
+            border-bottom: 1px solid #CCC;
+            padding-left: 10px;
+        }
+        .notice li:first-child{
+            border-top: 1px solid #CCC;
+        }
+        /* 열에 색채우기 2n-짝수 */ 
+        /* 홀수열은 2n+1 */
+        .notice li:nth-child(2n){
+            background-color: #EEE;
+        }
+        p{
+            text-align: center;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+        /* ptoduct */
+        .product_list{
+            position: relative;
+            width: 1200px;
+            margin: 100px auto;
+        }
+        .product_list li{
+            float: left;
+            width: 23.5%;
+            margin-left: 2%;
+            margin-bottom: 2%;
+        }
+        .product_list li:nth-child(4n+1){
+            margin-left: 0;
+        }
+        .product_list li img{
+            width: 100%;
+        }
+        .product_list li h2{
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        .notice li:hover{
+            background-color: #FCC;
+        }
+
+        p:nth-of-type(2){
+            color: red;
+        }
+        h1:nth-of-type(1){
+            background-color: #CCC;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>공지사항</h1>
+    <p>웹사이트의 정보를 빠르게 알려드리겠습니다.</p>
+    <ol class="notice">
+        <li>1 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>2 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>3 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>4 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>5 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>6 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>7 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>8 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>9 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>10 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+        <li>11 웹사이트를 오픈하였습니다. 자주 이용해 주세요.</li>
+    </ol>
+
+    <h1>제품 소개</h1>
+    <p>웹사이트의 제품을 확인해 보세요.</p>
+    <ul class="product_list">
+        <li><img src="img/shop/living/living1.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living2.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living3.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living4.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living5.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living6.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living7.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living8.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living9.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living10.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living11.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living12.jpg" alt="">
+        <h2>Product</h2>
+        </li>
+    </ul>
+</body>
+</html>

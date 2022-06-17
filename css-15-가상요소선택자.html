@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 가상요소 선택자</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        ul>li:first-child::after{
+            content: "NEW";
+            font-size: 10px;
+            background-color: #FF0;
+            margin-left: 10px;
+            padding: 2px 3px;
+            border-radius: 3px;
+        }
+
+        ul>li:nth-child(4)::after{
+            content: "HOT";
+            font-size: 10px;
+            background-color: orange;
+            color: #FFF;
+            margin-left: 10px;
+            padding: 2px 3px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notice</h1>
+    <ul>
+        <li>웹사이트가 다시 오픈되었습니다.</li>
+        <li>웹사이트 점검을 위한 안내.</li>
+        <li>2022 여름 이벤트</li>
+        <li>2022 신입사원 취업설명회.</li>
+        <li>웹사이트가 오픈되었습니다.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 자손 후손 nav</title>
+          <!-- 자식 자손 -->
+    <style>
+        .gnb>ul>li>a{
+            font-size: 20px;
+            color: #222;
+            font-weight: bold;
+        }
+        .gnb>ul>li>ul a{
+            font-size: 14px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">Abot</a>
+                <ul>
+                    <li><a href="#">CEO</a></li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Product</a>
+                <ul>
+                    <li><a href="#">Best</a></li>
+                    <li><a href="#">New</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 문자 선택자</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        article{
+            width: 800px;
+            padding: 20px;
+            border: 1px solid #EEE;
+            margin: 50px auto;
+        }
+        h1{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.4em;
+            text-align: justify;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        article p::first-letter{
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        /*  첫번째 글자만 들여쓰기 */
+        article p::first-line{
+            font-style:italic;
+        }
+        article p::selection{
+            background-color: #231;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+    <h1>문자 선택자</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu urna mattis, tempus urna at, fringilla massa. Integer eu arcu vitae tellus ornare pulvinar quis eu eros. Vivamus ullamcorper est efficitur enim ultricies luctus. Praesent at est vitae orci pulvinar fringilla. Nulla sodales euismod nibh at sollicitudin. Quisque eget magna blandit, sagittis elit vitae, cursus dolor. Nulla venenatis iaculis purus, in luctus libero consequat varius. Mauris lobortis diam arcu. Pellentesque nulla dolor, finibus sed felis a, tempus aliquam ex. Pellentesque augue arcu, viverra in viverra id, iaculis in tellus. In et lorem bibendum, gravida leo ac, pulvinar lacus. Phasellus efficitur tempor lectus non faucibus. Morbi eros risus, tincidunt id vestibulum vel, molestie eu lacus. Donec eleifend, urna in tincidunt feugiat, orci lorem semper leo, sit amet interdum felis nibh a ligula.</p>
+
+    <p>Integer luctus molestie lectus, ac viverra nunc elementum at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas maximus odio id tincidunt rutrum. Donec feugiat sem eu ex tempus, non placerat magna efficitur. Vestibulum sodales arcu at sem rutrum aliquam. Maecenas tempus nec ex eget lobortis. Aliquam sagittis arcu vel mauris volutpat tincidunt. Maecenas sed convallis ex, eget vehicula leo. Mauris eu pellentesque dui, eu aliquam lorem. Praesent sed neque sodales, vehicula nisi vel, tempor mi.</p>
+
+    <p>Nam ac orci tincidunt, sodales massa ut, viverra ligula. Fusce tincidunt condimentum nisi, eget scelerisque risus hendrerit vitae. Fusce sit amet rutrum turpis. Suspendisse id fringilla purus. Sed efficitur, dui quis cursus luctus, est nulla porttitor arcu, in dapibus sem dolor quis arcu. Pellentesque a fringilla magna, quis tempor ex. Ut nec dui tempor, vehicula sapien a, posuere tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla pharetra tempor arcu, et dapibus augue dignissim nec. Cras hendrerit vitae purus sit amet malesuada. Nam malesuada massa et ex mattis, volutpat egestas justo elementum. In aliquet, risus consequat tempus sagittis, ex risus posuere odio, eu efficitur nisi erat vel metus. Donec viverra nibh ex, in sagittis dolor tincidunt vitae. Donec ac urna ac neque suscipit vulputate vitae sit amet diam. Sed euismod vitae enim quis mattis.</p>
+    </article>
+</body>
+</html>

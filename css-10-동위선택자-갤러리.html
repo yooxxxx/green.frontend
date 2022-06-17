@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 동위 선택자 - 갤러리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        /* 시작 */
+        #gallery{
+            position: relative;
+            width: 520px;
+            margin: 50px auto;
+        }
+        #gallery .big_img{
+            padding: 10px;
+        }
+
+        #gallery .big_img input[type=radio]{
+            display: none;
+        }
+        #gallery .big_img div{
+            display: none;
+        }
+        #gallery .big_img input:checked+div{
+            display: block;
+        }
+        #gallery .big_img img{
+            display: block;
+            margin: 0 auto;
+        }
+
+        #gallery .small_img::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #gallery .small_img>li{
+            float: left;
+            width: 23.5%;
+            margin-left: 2%;
+        }
+        #gallery .small_img>li img{
+            width: 100px;
+            display: block;
+        }
+
+        #gallery .small_img>li:first-child{
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="gallery">
+        <div class="big_img">
+            <input type="radio" name="tabs" id="tabs1" checked>
+            <div><img src="img/shop/living/living1.jpg" alt=""></div>
+            <input type="radio" name="tabs" id="tabs2">
+            <div><img src="img/shop/living/living2.jpg" alt=""></div>
+            <input type="radio" name="tabs" id="tabs3">
+            <div><img src="img/shop/living/living3.jpg" alt=""></div>
+            <input type="radio" name="tabs" id="tabs4">
+            <div><img src="img/shop/living/living4.jpg" alt=""></div>
+        </div>
+        <ul class="small_img">
+            <li><label for="tabs1"><img src="img/shop/living/living1.jpg" alt=""></label></li>
+            <li><label for="tabs2"><img src="img/shop/living/living2.jpg" alt=""></label></li>
+            <li><label for="tabs3"><img src="img/shop/living/living3.jpg" alt=""></label></li>
+            <li><label for="tabs4"><img src="img/shop/living/living4.jpg" alt=""></label></li>
+        </ul>
+    </section>
+</body>
+</html>

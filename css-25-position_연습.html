@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 위치 속성</title>
+    <style>
+        /* 초기설정 */
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        img{display: block;}
+
+        #header{
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="top_logo"><img src="img/toplogo.png" alt="yedazidoor"></h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Promotion</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">Customer</a></li>
+            </ul>
+        </nav>
+        <nav class="util">
+            <ul>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contents">
+        <div class="top_banner">
+            <!-- <img src="img/banner_1.jpg" alt="" class="top_bg_img"> -->
+            <ul class="banner_img">
+                <li><img src="img/banner_1.jpg" alt=""></li>
+                <li><img src="img/banner_2.jpg" alt=""></li>
+                <li><img src="img/banner_4.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="product">
+            <h2>PRODUCT</h2>
+            <ul class="product_list">
+                <li><img src="img/shop/phone/phone1.jpg" alt="">
+                    <div class="over_box">
+                        <a href="#">더 보기 +</a>
+                    </div>
+                </li>
+                <li><img src="img/shop/phone/phone2.jpg" alt="">
+                    <div class="over_box">
+                        <a href="#">더 보기 +</a>
+                    </div>
+                </li>
+                <li><img src="img/shop/phone/phone3.jpg" alt="">
+                    <div class="over_box">
+                        <a href="#">더 보기 +</a>
+                    </div>
+                </li>
+                <li><img src="img/shop/phone/phone4.jpg" alt="">
+                    <div class="over_box">
+                        <a href="#">더 보기 +</a>
+                    </div>
+                </li>
+                <li><img src="img/shop/phone/phone5.jpg" alt="">
+                    <div class="over_box">
+                        <a href="#">더 보기 +</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="about">
+            <div class="about_img">
+                <img src="img/shop/poster/poster2.jpg" alt="">
+            </div>
+            <div class="about_text">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor dolor ac est pulvinar aliquet. Quisque dignissim mi et mauris eleifend feugiat. Vestibulum eu purus convallis, gravida justo vitae, porttitor augue. In vestibulum risus vitae dui aliquet, quis mollis ex facilisis. Aenean et ipsum ultricies, pharetra massa sed, laoreet lorem. Etiam sapien lorem, tempus id sem ac, laoreet tempus justo. Mauris at ligula congue justo pretium vestibulum vel tempor eros. Quisque iaculis lorem ut interdum consectetur. In aliquam imperdiet ligula id aliquam. Suspendisse feugiat gravida dui, sit amet varius nunc laoreet non.</p>
+            </div>            
+        </div>
+    </section>
+</body>
+</html>

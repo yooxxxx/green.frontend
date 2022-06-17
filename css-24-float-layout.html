@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css float layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        li{
+            list-style: none;
+        }
+
+        /* 시작 */
+        #header{
+            position: relative;
+            width: 1200px;
+            height: 100px;
+            margin: 20px auto;
+            border: 1px solid #EEE;
+        }
+        #header h1{
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        #header .gnb{
+            /* 앱솔루트는 다른태그에 영향을 주지 않음 
+            플루트를 제거하지 않아도 괜찮음*/
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+        /* #header .gnb>ul::after{
+            content: ""; 
+            display: block; 
+            clear: both;
+        }  따로 줘도 됨*/
+        #header .gnb>ul>li{
+            /* 메뉴를 right로 사용하면 웹접근성에 위배됨
+            거꾸로 시작함 */
+            float: left;
+            width: 120px;
+        }
+        #header .gnb>ul>li>a{
+            display: block;
+            color: #000;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* CONTENT */
+        #contents{
+            position: relative;
+            width: 1200px;
+            margin: 20px auto;
+        }
+        #contents::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #contents #aside{
+            position: relative;
+            width: 200px;
+            float: left;
+            border: 1px solid #EEE;
+        }
+        #contents #content{
+            position: relative;
+            width: 980px;
+            float: right;
+            border: 1px solid #EEE;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* footer */
+        #footer{
+            position: relative;
+            width: 1200px;
+            height: 100px;
+            margin: 20px auto;
+            border: 1px solid #EEE;
+        }
+        #footer .fnb{
+            margin-top: 20px;
+        }
+        #footer .fnb ul{
+            text-align: center;
+        }
+        #footer .fnb li{
+            /* 인라인블럭은 텍스트얼라인을 사용할수 있다 
+            넓이가 중요하지 않은 상황에서*/
+            display: inline-block;
+            font-size: 14px;
+            padding: 3px 5px;
+        }
+        #footer p{
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>logo</h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">Menu-1</a></li>
+                <li><a href="#">Menu-2</a></li>
+                <li><a href="#">Menu-3</a></li>
+                <li><a href="#">Menu-4</a></li>
+                <li><a href="#">Menu-5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contents">
+        <aside id="aside">
+            <h2>Aside</h2>
+        </aside>
+        <section id="content">
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio suscipit, feugiat augue id, placerat magna. Maecenas ligula risus, sollicitudin eu accumsan vitae, mattis a metus. Donec scelerisque, dolor et pellentesque aliquet, mi erat consectetur felis, nec facilisis quam purus vel felis. Fusce feugiat, mauris non dictum vulputate, risus mauris porta ex, ac sagittis risus ipsum id elit. Vestibulum tincidunt posuere elit, ut rutrum sem. Donec id quam nec mauris tempor ullamcorper in a risus. Quisque non lorem ut erat auctor eleifend sit amet eget nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque interdum enim nec augue scelerisque, id vestibulum dolor ornare. Aenean porta enim id venenatis ornare. Nunc et mollis lacus.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio suscipit, feugiat augue id, placerat magna. Maecenas ligula risus, sollicitudin eu accumsan vitae, mattis a metus. Donec scelerisque, dolor et pellentesque aliquet, mi erat consectetur felis, nec facilisis quam purus vel felis. Fusce feugiat, mauris non dictum vulputate, risus mauris porta ex, ac sagittis risus ipsum id elit. Vestibulum tincidunt posuere elit, ut rutrum sem. Donec id quam nec mauris tempor ullamcorper in a risus. Quisque non lorem ut erat auctor eleifend sit amet eget nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque interdum enim nec augue scelerisque, id vestibulum dolor ornare. Aenean porta enim id venenatis ornare. Nunc et mollis lacus.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio suscipit, feugiat augue id, placerat magna. Maecenas ligula risus, sollicitudin eu accumsan vitae, mattis a metus. Donec scelerisque, dolor et pellentesque aliquet, mi erat consectetur felis, nec facilisis quam purus vel felis. Fusce feugiat, mauris non dictum vulputate, risus mauris porta ex, ac sagittis risus ipsum id elit. Vestibulum tincidunt posuere elit, ut rutrum sem. Donec id quam nec mauris tempor ullamcorper in a risus. Quisque non lorem ut erat auctor eleifend sit amet eget nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque interdum enim nec augue scelerisque, id vestibulum dolor ornare. Aenean porta enim id venenatis ornare. Nunc et mollis lacus.</p>
+            </article>
+        </section>
+    </section>
+    <footer id="footer">
+        <nav class="fnb">
+            <ul>
+                <li>회사소개</li>
+                <li>약관동의</li>
+                <li>개인정보제공동의</li>
+            </ul>
+        </nav>
+        <p>copyright &copy; GreenArt all right reserverd.</p>
+    </footer>
+</body>
+</html>

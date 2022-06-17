@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 반응 선택자</title>
+    <style>
+        /* 초기설정 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        /* 시작 */
+        .gnb{
+            position: relative;
+            width: 600px;
+            height: 60px;
+            margin: 50px auto;
+        }
+        .gnb>ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .gnb>ul>li{
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .gnb>ul>li>a{
+            display: block;
+            text-align: center;
+            line-height: 58px;
+            border: 1px solid #EEE;
+            border-left: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #222;
+            transition-duration: 0.5s;
+        }
+    
+        .gnb>ul>li:first-child>a{
+            border-left: 1px solid #EEE;
+        }
+
+        .gnb>ul>li>a:hover{
+            background-color: #222;
+            color: #FFF;
+        }
+        .gnb>ul>li>a:focus{
+            background-color: #222;
+            color: #FFF;
+        }
+        .gnb>ul>li>a:active{
+            background-color: #923;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Customer</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

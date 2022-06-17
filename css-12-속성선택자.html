@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 속성 선택자</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        ul{
+            width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        ul>li{
+            width: 23.5%;
+            margin-bottom: 2%;
+        }
+        ul>li img{
+            width: 100%;
+        }
+        ul>li h2{
+            font-size: 14px;
+            margin: 10px;
+            text-align: center;
+            color: #666;
+        }
+        ul>li img[alt="지난 이벤트"]{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>이벤트를 확인해 보세요.</p>
+    <ul class="product_list">
+        <li><img src="img/shop/living/living1.jpg" alt="진행 중인 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living2.jpg" alt="진행 중인 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living3.jpg" alt="진행 중인 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living4.jpg" alt="진행 중인 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living5.jpg" alt="진행 중인 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living6.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living7.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living8.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living9.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living10.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living11.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+        <li><img src="img/shop/living/living12.jpg" alt="지난 이벤트">
+        <h2>Product</h2>
+        </li>
+    </ul>
+</body>
+</html>
