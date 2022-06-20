@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css z-index</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+        }
+        .img{
+            width: 1300px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .img div{
+            position: absolute;
+        }
+       .img div:first-child{
+        left: 0;
+        top: 0;
+       }
+       .img div:nth-child(2){
+        left: 300px;
+        top: 0;
+       }
+       .img div:nth-child(3){
+        left: 600px;
+        top: 0;
+       }
+       .img div:nth-child(4){
+        left: 900px;
+        top: 0;
+       }
+        .img div:hover{
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <section class="img">
+        <div><img src="img/lookbook_img1.jpg" alt=""></div>
+        <div><img src="img/lookbook_img2.jpg" alt=""></div>
+        <div><img src="img/lookbook_img3.jpg" alt=""></div>
+        <div><img src="img/lookbook_img4.jpg" alt=""></div>
+    </section>
+</body>
+</html>

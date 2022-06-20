@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css font</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+KR:wght@400;700;900&family=Raleway&display=swap');
+        /* font-family: 'DM Sans', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Raleway', sans-serif; */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        address{
+            font-size: normal;
+        }
+        a{
+            text-decoration: none;
+        }
+        body,section,h1,h2,h3,h4,h5,h6,p,li,div,header{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            line-height: 1.6em;
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0 0 1px rgba(0,0,0,0.5);
+            color: white;
+        }
+        hr{
+            margin: 40px 0;
+        }
+        section{
+            width: 800px;
+            margin: 0 auto;
+        }
+        section p{
+            font-size: 1em;
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.4em;
+            text-align: justify;
+        }
+        section p:nth-child(2){
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }   
+        section p:nth-child(3){
+            font-weight: bold;
+        }
+        .btn1{
+            display: block;
+            width: 120px;
+            height: 46px;
+            border: 1px solid #000;
+            line-height: 46px;
+            text-align: center;
+            color: #222;
+            margin: 50px;
+            border-radius: 24px;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        }
+        /* 정확한 사이즈를 알수있다
+        단점-라인하이트와 텍스트 얼라인을 적어야한다 */
+        .btn2{
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #000;
+            color: #222;
+            margin: 50px;
+            border-radius: 24px;
+            letter-spacing: -.4%;
+        }
+        /* 검사를 해야지만 사이즈를 알수있다 */
+
+        .notice{
+            position: relative;
+            width: 200px;
+            margin: 50px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        /* 넘치는 글자 말줄임표로 보이게 하기 */
+        /* 그냥 a 태그일때는 가능 
+        a가 디스플레이 블럭일땐 적용 안됨
+        그럴땐 .notice li a 에게 줘야함 */
+        .notice li{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .notice li::selection{
+            background-color: #F00;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS를 이용한 문자 속성</h1>
+    <hr />
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dolor rutrum, eleifend augue in, eleifend neque. Nullam consequat blandit feugiat. Donec vehicula, ex non ornare pulvinar, arcu velit aliquam nisl, non malesuada magna velit nec leo. Praesent mattis orci eu lacus suscipit, nec fermentum lorem lobortis. Sed urna elit, aliquam a purus et, egestas ornare lacus. Suspendisse ornare mollis dui. Pellentesque eu nunc vitae ex euismod sodales. Pellentesque varius porta orci, vulputate placerat elit. Curabitur et tempus elit.</p>
+
+        <p>Praesent nec est commodo lectus dictum elementum. Aenean interdum consequat metus, et feugiat lacus sodales in. Vivamus sed tempus lectus. Praesent non felis leo. Nulla nec diam mattis, feugiat massa commodo, mollis massa. Vivamus at molestie massa, at cursus augue. Phasellus a dignissim ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac nisi sit amet nibh gravida luctus sit amet at tellus. Fusce vel hendrerit nulla. Quisque vel rhoncus tellus, vitae aliquet arcu. In egestas sit amet justo eu finibus. Curabitur accumsan ante mauris, a ultricies tellus congue accumsan.</p>
+    
+        <p>Vivamus purus massa, aliquam pellentesque facilisis vitae, cursus quis dolor. Donec efficitur urna blandit pellentesque tristique. Nam mattis auctor condimentum. Proin sodales laoreet est, eget pellentesque dui sollicitudin sed. Mauris cursus congue rhoncus. Phasellus vitae ante lectus. Suspendisse malesuada nunc quis lacus elementum, quis fringilla purus condimentum. Maecenas orci mauris, vestibulum in lectus in, vehicula molestie nunc. Integer euismod leo urna, non feugiat mauris dapibus et.</p>
+    </section>
+    <a href="#" class="btn1">VIEW MORE1</a>
+    <a href="#" class="btn2">VIEW MORE2</a>
+    <ul class="notice">
+        <li>2022년 여름대비 에어컨 50% 세일 단 5일 간만</li>
+        <li>2022년 여름대비 에어컨 50% 세일 단 5일 간만</li>
+        <li>2022년 여름대비 에어컨 50% 세일 단 5일 간만</li>
+        <li>2022년 여름대비 에어컨 50% 세일 단 5일 간만</li>
+    </ul>
+</body>
+</html>

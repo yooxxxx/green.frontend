@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+        }
+
+        section{
+            overflow: hidden;
+        }
+
+        .box{
+            width: 200px;
+            height: 300px;
+            background-color: #F00;
+            border: 5px solid #000;
+            overflow: auto;
+        }
+        .text_box{
+            width: 600px;
+            height: 200px;
+            border: 1px solid #EEE;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.6em;
+            overflow: auto;
+            margin: 100px;
+            background: linear-gradient(0,#FF0 0%, #693 50%, #F90 100%);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="img/main_top_1.jpg" alt="">
+    </section>
+
+    <div class="box">
+        <img src="img/product0.jpg" alt="">
+    </div>
+
+    <div class="text_box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dolor rutrum, eleifend augue in, eleifend neque. Nullam consequat blandit feugiat. Donec vehicula, ex non ornare pulvinar, arcu velit aliquam nisl, non malesuada magna velit nec leo. Praesent mattis orci eu lacus suscipit, nec fermentum lorem lobortis. Sed urna elit, aliquam a purus et, egestas ornare lacus. Suspendisse ornare mollis dui. Pellentesque eu nunc vitae ex euismod sodales. Pellentesque varius porta orci, vulputate placerat elit. Curabitur et tempus elit.</p>
+
+        <p>Praesent nec est commodo lectus dictum elementum. Aenean interdum consequat metus, et feugiat lacus sodales in. Vivamus sed tempus lectus. Praesent non felis leo. Nulla nec diam mattis, feugiat massa commodo, mollis massa. Vivamus at molestie massa, at cursus augue. Phasellus a dignissim ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac nisi sit amet nibh gravida luctus sit amet at tellus. Fusce vel hendrerit nulla. Quisque vel rhoncus tellus, vitae aliquet arcu. In egestas sit amet justo eu finibus. Curabitur accumsan ante mauris, a ultricies tellus congue accumsan.</p>
+    
+        <!-- <p>Vivamus purus massa, aliquam pellentesque facilisis vitae, cursus quis dolor. Donec efficitur urna blandit pellentesque tristique. Nam mattis auctor condimentum. Proin sodales laoreet est, eget pellentesque dui sollicitudin sed. Mauris cursus congue rhoncus. Phasellus vitae ante lectus. Suspendisse malesuada nunc quis lacus elementum, quis fringilla purus condimentum. Maecenas orci mauris, vestibulum in lectus in, vehicula molestie nunc. Integer euismod leo urna, non feugiat mauris dapibus et.</p> -->
+    </div>
+</body>
+</html>
