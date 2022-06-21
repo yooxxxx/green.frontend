@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform</title>
+    <style>
+        .box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #F00;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            transition-duration: 1s;
+        }
+        .box:hover{
+            transform: translate(-50%,-50%) rotate(360deg) scale(1.2);
+        }
+        .skew{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #00F;
+            transition-duration: 1s;
+        }
+        /* 기울기 */
+        /* 세로로 기울기transform: skew(0, 10deg); */
+        .skew:hover{
+            transform: skew(0, 10deg);
+        }
+
+        .perspective{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            background-color: #0F0;
+            transform: perspective(50px) rotateY(15deg) scale(0.8);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="skew"></div>
+    <div class="perspective"></div>
+</body>
+</html>

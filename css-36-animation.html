@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #topBanner{
+            position: relative;
+        }
+        #topBanner img{
+            width: 100%;
+        }
+        #topBanner h2{
+            position: absolute;
+            font-size: 50px;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0.5);
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation-name: topText1;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        #topBanner h3{
+            position: absolute;
+            font-size: 50px;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0.5);
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation-name: topText2;
+            animation-duration: 2s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+        #topBanner h4{
+            position: absolute; 
+            font-size: 50px; 
+            color: #FFF; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+            left: 50%; 
+            top:65%;
+            transform: translate(-50%, -50%)
+        }
+        #topBanner h4 span{
+            position: relative; 
+            display: inline-block; 
+            opacity: 0; 
+            top: 100px; 
+            animation: frame 0.5s; 
+            animation-fill-mode: forwards; 
+        }
+
+        #topBanner h4 span:nth-child(1){animation-delay: 2s;}
+        #topBanner h4 span:nth-child(2){animation-delay: 2.1s;}
+        #topBanner h4 span:nth-child(3){animation-delay: 2.2s;}
+        #topBanner h4 span:nth-child(4){animation-delay: 2.3s;}
+        #topBanner h4 span:nth-child(5){animation-delay: 2.4s;}
+
+        @keyframes frame {
+            0%{ top: 100px; opacity: 0;}
+            100%{ top: 0; opacity: 1;}
+        }
+
+        @keyframes topText1{
+            0%{top: 0; opacity: 0;}
+            100%{top: 50%; opacity: 1;}
+        }
+        @keyframes topText2{
+            0%{top: 0; opacity: 0;}
+            100%{top: 57%; opacity: 1;}
+        }
+
+    </style>
+</head>
+<body>
+    <section id="topBanner">
+        <img src="img/banner_2.jpg" alt="">
+        <h2>CSS3</h2>
+        <h3>ANIMATION</h3>
+        <h4>
+            <span>F</span>
+            <span>R</span>
+            <span>A</span>
+            <span>M</span>
+            <span>E</span>
+        </h4>
+    </section>
+</body>
+</html>

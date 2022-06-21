@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box{
+            position: relative;
+            margin-left: 0;
+            margin-top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #F00;
+            opacity: 1;
+            transition-duration: 1s;
+        }
+        .box:hover{
+            margin-top: 150px;
+            opacity: 0.5;
+        }
+        .box2{
+            position: relative; 
+            width: 200px; 
+            height: 200px; 
+            background-color: #0FF;
+            border: 5px solid #000;
+            transition-duration: 1s;
+        }
+        .box2:hover{
+            border: 5px solid #F00;
+            background-color: #FF0;
+        }
+        
+        .wrap{
+            position: relative;
+            height: 250px;
+            width: 600px;
+            padding: 5px 5px 0 5px;
+            border: 5px solid #000;
+            margin: 100px;
+        }
+        .wrap:hover .bar{
+            width: 600px;
+        }
+        .bar{
+            width: 1px;
+            height: 45px;
+            background-color: #F00;
+            position: relative;
+            margin-bottom: 5px;
+            transition-duration: 1s;
+        }
+        .wrap:hover .bar1{
+            background-color: #FF0;
+            
+        }
+        .wrap:hover .bar2{
+            background-color: #FC0;
+            transition-delay: 0.5s;
+        }
+        .wrap:hover .bar3{
+            background-color: #F90;
+            transition-delay: 1s;
+        }
+        .wrap:hover .bar4{
+            background-color: #F60;
+            transition-delay: 1.5s;
+        }
+        .wrap:hover .bar5{
+            background-color: #F30;
+            transition-delay: 2s;
+        }
+        /* .bar1{transition-delay: 0s;}
+        .bar2{transition-delay: 0.5s;}
+        .bar3{transition-delay: 1s;}
+        .bar4{transition-delay: 1.5s;}
+        .bar5{transition-delay: 2s;} */
+        .bar1{
+            transition-timing-function: ease;
+            transition-property: width;
+            /*이렇게 하면 백그라운드 트랜지션은 적용이 안됨*/
+        }
+        .bar2{
+            transition-timing-function: ease-in;
+        }
+        .bar3{
+            transition-timing-function: ease-out;
+        }
+        .bar4{
+            transition-timing-function: ease-in-out;
+        }
+        .bar5{
+            transition-timing-function: linear;
+        }
+
+        li{
+            list-style: none;
+        }
+        /* 네비게이션 만들기 */
+        .gnb{
+            position: relative;
+            width: 300px;
+            margin: 50px auto;
+        }
+        .gnb>ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .gnb>ul>li{
+            float: left;
+            width: 150px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .gnb>ul>li:hover>ul{
+            opacity: 1;
+            height: 164px;
+        }
+        .gnb>ul>li>ul{
+            height: 1px;
+            background-color: #EEE;
+            opacity: 0;
+            transition-duration: 0.5s;
+            overflow: hidden;
+        }
+        .gnb>ul>li>ul a{
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 1px solid #EEE;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <ul>
+            <li>About
+                <ul>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                </ul>
+            </li>
+            <li>Product
+                <ul>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                    <li><a href="#">Sub Menu</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="wrap">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+    </div>
+
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>
